@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="oikawa01.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/style.css">
+    <title>Js</title>
+    <style>
+body {
+    background-color: rgb(240, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.box-nav {
+    background-color: rgb(216, 231, 253);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.box {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    border-radius: 15px;
+    color: white;
+}
+
+input {
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    font-size: 15px;
+    width: 50%;
+
+}
+
+button {
+    padding: 10px;
+    border: none;
+    outline: none;
+    width: 50%;
+    background-color: rgb(98, 121, 255);
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: rgb(60, 75, 155);
+}
+    </style>
+</head>
+<body>
+    <div class="box-nav">
+        <h1>Exercicio#002</h1>
+        <h2>Dale</h2>
+    </div>
+    <div class="box">
+        <p>Leia valores A e B. Trocar os valores entre as duas variaveis, A passa a possuir o valor da variavel B e a variavel B passa a possuir o valor da variavel A.</p>
+        <input type="text"  id="num-a" placeholder="Digite um valor A">
+        <br><br>
+        <input type="text"  id="num-b" placeholder="Digite um valor B">
+        <br></br>
+        <button onclick="go()">Enviar</button>
+    </div>
+
+    <script>
+    function go()
+    {
+       var a = document.getElementById('num-a').value;
+       var b = document.getElementById('num-b').value;
+       console.log('Variavel A' + a);
+       console.log('Variavel B' + b);
+       var c = b;
+       var b = a;
+       var a = c;
+       console.log('Variavel A' + a);
+       console.log('Variavel B' + b);
+
+    }
+    </script>
+</body>
+</html>
